@@ -23,3 +23,8 @@ cd client
 npm install
 npm run dev
 ```
+## Deploy to Vercel
+1. Create a Vercel project for the client folder.
+2. Set the build command to `npm run build`.
+3. Set the output directory to `dist`.
+4. For the API, deploy the server separately or connect your own backend host.
