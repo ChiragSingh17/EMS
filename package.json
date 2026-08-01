@@ -1,0 +1,12 @@
+{
+  "name": "ems-fullstack",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace client",
+    "start": "node server/server.js"
+  }
+}
