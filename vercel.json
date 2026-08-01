@@ -1,18 +1,14 @@
 {
   "buildCommand": "cd client && npm install && npm run build",
-  "public": "client/dist",
+  "functions": {
+    "server/api/index.js": {
+      "maxDuration": 30
+    }
+  },
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "server/api/index.js"
-    },
-    {
-      "src": "/(.*\\..*)",
-      "dest": "/client/dist/$1"
-    },
-    {
-      "src": "/.*",
-      "dest": "/client/dist/index.html"
     }
   ]
 }
